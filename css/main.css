@@ -1,0 +1,115 @@
+/************************
+Flexbox Layout
+************************/
+.header, .nav {
+  display: flex;
+}
+
+.header {
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.nav {
+  flex: 1;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.logo {
+  flex: 0 0 150px;
+}
+
+@media all and (min-width: 640px) {
+  .header, .nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+}
+
+@media all and (min-width: 900px) {
+  .nav {
+    flex: none;
+  }
+}
+
+
+
+/************************
+Additional Styling
+************************/
+
+body {
+  margin: 0;
+  font-family: Helvetica;
+}
+
+.header {
+  padding: 20px 0px;
+  margin: 0 auto;
+  background: #8f8f8f;
+  max-width: 900px;
+}
+
+.logo {
+  background: transparent url('/images/Array_Logo.png') center center no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  margin: .5em .5em;
+}
+
+.nav {
+  list-style: none;
+}
+
+.nav li {
+  margin: 12px 0 12px 28px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-left: 16px;
+  white-space: nowrap;
+}
+
+.nav li a:hover {
+  color: rgba(255,255,255,0.3);
+}
+
+.nav li:last-child a {
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  padding: 8px 16px 7px;
+}
+
+.nav li:last-child a:hover {
+  background: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+@media all and (min-width: 640px) {
+  .nav {
+    padding-left: 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .nav li a {
+    padding: 0;
+  }
+
+}
+
+@media all and (min-width: 900px) {
+  .nav {
+    padding-right: 20px;
+  }
+}
